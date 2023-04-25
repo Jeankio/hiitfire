@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FCA29F81D780009A9B3 /* hiitfireApp.swift */; };
-		C0050FCD29F81D780009A9B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FCC29F81D780009A9B3 /* ContentView.swift */; };
+		C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */; };
 		C0050FCF29F81D7D0009A9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0050FCE29F81D7D0009A9B3 /* Assets.xcassets */; };
 		C0050FD229F81D7D0009A9B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0050FD129F81D7D0009A9B3 /* Preview Assets.xcassets */; };
 		C0050FDC29F81D7E0009A9B3 /* hiitfireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FDB29F81D7E0009A9B3 /* hiitfireTests.swift */; };
 		C0050FE629F81D7E0009A9B3 /* hiitfireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FE529F81D7E0009A9B3 /* hiitfireUITests.swift */; };
 		C0050FE829F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */; };
+		C0050FF829F82B6E0009A9B3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF729F82B6E0009A9B3 /* AppTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		C0050FC729F81D780009A9B3 /* hiitfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiitfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0050FCA29F81D780009A9B3 /* hiitfireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireApp.swift; sourceTree = "<group>"; };
-		C0050FCC29F81D780009A9B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTrainingView.swift; sourceTree = "<group>"; };
 		C0050FCE29F81D7D0009A9B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0050FD129F81D7D0009A9B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0050FD729F81D7E0009A9B3 /* hiitfireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hiitfireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,7 @@
 		C0050FE129F81D7E0009A9B3 /* hiitfireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hiitfireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0050FE529F81D7E0009A9B3 /* hiitfireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireUITests.swift; sourceTree = "<group>"; };
 		C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0050FF729F82B6E0009A9B3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		C0050FC929F81D780009A9B3 /* hiitfire */ = {
 			isa = PBXGroup;
 			children = (
+				C0050FF529F822F70009A9B3 /* Models */,
+				C0050FF429F822DA0009A9B3 /* Views */,
 				C0050FCA29F81D780009A9B3 /* hiitfireApp.swift */,
-				C0050FCC29F81D780009A9B3 /* ContentView.swift */,
 				C0050FCE29F81D7D0009A9B3 /* Assets.xcassets */,
 				C0050FD029F81D7D0009A9B3 /* Preview Content */,
 			);
@@ -125,6 +128,30 @@
 				C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */,
 			);
 			path = hiitfireUITests;
+			sourceTree = "<group>";
+		};
+		C0050FF429F822DA0009A9B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0050FF529F822F70009A9B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0050FF629F82B4B0009A9B3 /* New Group */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0050FF629F82B4B0009A9B3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				C0050FF729F82B6E0009A9B3 /* AppTheme.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0050FCD29F81D780009A9B3 /* ContentView.swift in Sources */,
+				C0050FF829F82B6E0009A9B3 /* AppTheme.swift in Sources */,
+				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
