@@ -16,6 +16,7 @@
 		C0050FE829F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */; };
 		C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */; };
 		C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */; };
+		C0050FFC29F835980009A9B3 /* CardTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FFB29F835980009A9B3 /* CardTrainingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeModel.swift; sourceTree = "<group>"; };
 		C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTrainingModel.swift; sourceTree = "<group>"; };
+		C0050FFB29F835980009A9B3 /* CardTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTrainingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */,
+				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */,
+				C0050FFC29F835980009A9B3 /* CardTrainingView.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,

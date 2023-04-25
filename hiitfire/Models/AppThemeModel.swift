@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum theme: String {
+enum Theme: String {
     case bubblegum
     case buttercup
     case indigo
@@ -26,6 +26,6 @@ enum theme: String {
         }
     
     var mainColor: Color {
-            Color(rawValue)
+        Color(.black)
         }
 }

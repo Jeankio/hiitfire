@@ -3,9 +3,10 @@ import Foundation
 
 struct HiitTraining {
     var title: String
-    var exercise: [String]
+    var exersices: [String]
     var timeMinutes: Int
     var calories: Int
+    var theme: Theme
 }
 
 extension HiitTraining {
@@ -14,20 +15,20 @@ extension HiitTraining {
     
     [
         HiitTraining(title: "Basic to HIIT",
-                     exercise: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
+                     exersices: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
                      timeMinutes: 10,
-                     calories: 95),
+                     calories: 95, theme: .indigo),
         HiitTraining(title: "Tops of HIIT",
-                     exercise: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
+                     exersices: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
                      timeMinutes: 20,
-                     calories: 125),
+                     calories: 125, theme: .magenta),
         HiitTraining(title: "Burn fat yeah!",
-                     exercise: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
+                     exersices: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
                      timeMinutes: 30,
-                     calories: 150),
+                     calories: 150, theme: .oxblood),
         HiitTraining(title: "HIIT and more",
-                     exercise: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
+                     exersices: ["Jumping Jacks", "Burpees", "Jump Squats", "High knees", "Walkout"],
                      timeMinutes: 30,
-                     calories: 175),
+                     calories: 175, theme: .seafoam),
     ]
 }
