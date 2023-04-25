@@ -14,7 +14,8 @@
 		C0050FDC29F81D7E0009A9B3 /* hiitfireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FDB29F81D7E0009A9B3 /* hiitfireTests.swift */; };
 		C0050FE629F81D7E0009A9B3 /* hiitfireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FE529F81D7E0009A9B3 /* hiitfireUITests.swift */; };
 		C0050FE829F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */; };
-		C0050FF829F82B6E0009A9B3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF729F82B6E0009A9B3 /* AppTheme.swift */; };
+		C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */; };
+		C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,8 @@
 		C0050FE129F81D7E0009A9B3 /* hiitfireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hiitfireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0050FE529F81D7E0009A9B3 /* hiitfireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireUITests.swift; sourceTree = "<group>"; };
 		C0050FE729F81D7E0009A9B3 /* hiitfireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C0050FF729F82B6E0009A9B3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeModel.swift; sourceTree = "<group>"; };
+		C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTrainingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,17 +143,10 @@
 		C0050FF529F822F70009A9B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C0050FF629F82B4B0009A9B3 /* New Group */,
+				C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */,
+				C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C0050FF629F82B4B0009A9B3 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				C0050FF729F82B6E0009A9B3 /* AppTheme.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0050FF829F82B6E0009A9B3 /* AppTheme.swift in Sources */,
+				C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */,
+				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,
 			);
