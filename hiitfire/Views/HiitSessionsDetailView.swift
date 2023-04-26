@@ -18,7 +18,7 @@ struct HiitSessionsDetailView: View {
                 HStack {
                     Label("Duration", systemImage: "clock")
                     Spacer()
-                    Text("\(exersice.timeMinutes) minutes")
+                    Text("\(exersice.duration) minutes")
                     }
                 HStack {
                     Label("Set color", systemImage: "paintpalette")
@@ -32,7 +32,8 @@ struct HiitSessionsDetailView: View {
             }
             
             Section(header: Text("You will burn")) {
-                let caloriesBurned = Int(Double(exersice.timeMinutes) * 9.3)
+                //Promedio de calorias quemadas por minuto vs. Duration
+                let caloriesBurned = Int(Double(exersice.duration) * 9.3)
                 Label("\(caloriesBurned) Calories", systemImage: "flame.fill")
                     .bold()
                     .font(.system(size: 18))

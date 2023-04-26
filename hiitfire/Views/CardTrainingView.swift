@@ -19,7 +19,7 @@ struct CardTrainingView: View {
                     .font(.system(size: 20))
                     .bold()
                 Spacer()
-                Label("\(exersice.timeMinutes)", systemImage: "clock")
+                Label("\(exersice.duration)", systemImage: "clock")
                     .font(.system(size: 20))
                     .bold()
             }
