@@ -31,6 +31,15 @@ struct HiitSessionsDetailView: View {
                 }
             }
             
+            Section(header: Text("You will burn")) {
+                let caloriesBurned = Int(Double(exersice.timeMinutes) * 9.3)
+                Label("\(caloriesBurned) Calories", systemImage: "flame.fill")
+                    .bold()
+                    .font(.system(size: 18))
+                    //.frame(maxWidth:.infinity, alignment: .center)
+            }
+           
+            
             Section(header: Text("HIIT Exersices")) {
                 ForEach(exersice.exersices) { exersice in
                     Label(exersice.name, systemImage: "figure.dance")
