@@ -1,12 +1,22 @@
 
 import Foundation
 
-struct HiitTraining {
+struct HiitTraining: Identifiable {
+    let id: UUID
     var title: String
     var exersices: [String]
     var timeMinutes: Int
     var calories: Int
     var theme: Theme
+    
+    init(id: UUID = UUID(), title: String, exersices: [String], timeMinutes: Int, calories: Int, theme: Theme) {
+        self.id = id
+        self.title = title
+        self.exersices = exersices
+        self.timeMinutes = timeMinutes
+        self.calories = calories
+        self.theme = theme
+    }
 }
 
 extension HiitTraining {

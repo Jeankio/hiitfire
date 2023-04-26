@@ -1,9 +1,4 @@
-//
-//  CardTrainingView.swift
-//  hiitfire
-//
-//  Created by Jean Karel on 25/04/23.
-//
+
 
 import SwiftUI
 
@@ -13,17 +8,20 @@ struct CardTrainingView: View {
         VStack(alignment: .leading) {
             Text(exersice.title)
                 .font(.headline)
+                .bold()
             Spacer()
             HStack {
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
                 Label("\(exersice.exersices.count)", systemImage: "figure.run.square.stack.fill")
+                    .font(.system(size: 20))
+                    .bold()
                 Spacer()
                 Label("\(exersice.calories)", systemImage: /*@START_MENU_TOKEN@*/"flame.fill"/*@END_MENU_TOKEN@*/)
+                    .font(.system(size: 20))
+                    .bold()
                 Spacer()
-                Label("\(exersice.timeMinutes)", systemImage: /*@START_MENU_TOKEN@*/"timer.square"/*@END_MENU_TOKEN@*/)
+                Label("\(exersice.timeMinutes)", systemImage: "clock")
+                    .font(.system(size: 20))
+                    .bold()
             }
             .font(.caption)
         }
