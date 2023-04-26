@@ -8,7 +8,7 @@ struct ExersiceView: View {
     var body: some View {
         NavigationStack {
             List(exersices) { exersice in
-                NavigationLink(destination: Text(exersice.title)) {
+                NavigationLink(destination: HiitSessionsDetailView(exersice: exersice)) {
                     CardTrainingView(exersice: exersice)
                 }
                 .listRowBackground(exersice.theme.mainColor)

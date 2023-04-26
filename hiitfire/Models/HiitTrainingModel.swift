@@ -4,7 +4,7 @@ import Foundation
 struct HiitTraining: Identifiable {
     let id: UUID
     var title: String
-    var exersices: [String]
+    var exersices: [Exersice]
     var timeMinutes: Int
     var calories: Int
     var theme: Theme
@@ -12,10 +12,22 @@ struct HiitTraining: Identifiable {
     init(id: UUID = UUID(), title: String, exersices: [String], timeMinutes: Int, calories: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.exersices = exersices
+        self.exersices = exersices.map { Exersice(id: UUID(), name: $0) }
         self.timeMinutes = timeMinutes
         self.calories = calories
         self.theme = theme
+    }
+}
+
+extension HiitTraining {
+    struct Exersice: Identifiable {
+        let id: UUID
+        var name: String
+        
+        init(id: UUID, name: String) {
+            self.id = id
+            self.name = name
+        }
     }
 }
 
