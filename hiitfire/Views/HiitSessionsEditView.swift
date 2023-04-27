@@ -46,6 +46,7 @@ struct HiitSessionsEditView: View {
                     }) {
                         Image(systemName: "plus.square.on.square")
                     }
+                    // Desactiva el boton sin agregar para no agregar campos vacios 
                     .disabled(newExerciseName.isEmpty)
                 }
             }
