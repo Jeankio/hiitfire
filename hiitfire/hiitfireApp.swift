@@ -11,7 +11,7 @@ import SwiftUI
 struct hiitfireApp: App {
     var body: some Scene {
         WindowGroup {
-            ExerciseView(exercises: HiitTraining.backTraining)
+            HiitSessionsEditView()
         }
     }
 }
