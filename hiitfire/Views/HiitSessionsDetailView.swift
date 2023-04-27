@@ -11,7 +11,8 @@ struct HiitSessionsDetailView: View {
     let exercise: HiitTraining
     var body: some View {
         List {
-            Section(header: Text("Training Settings")) {
+            Section(header: Text("Training info")) {
+                // Navegacion desde Detailview a HiitTrainingView
                 NavigationLink(destination: HiitTrainingView()) {
                     Label("Start HIIT session", systemImage: "timer.square")
                         .font(.headline)

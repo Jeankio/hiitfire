@@ -8,6 +8,17 @@ struct HiitTraining: Identifiable {
     var duration: Int
     var calories: Int
     var theme: Theme
+    // Convertir duration en double para el slider
+    var durationDouble: Double {
+        get {
+            Double(duration)
+        }
+        
+        set {
+            duration = Int(newValue)
+            
+        }
+    }
     
     init(id: UUID = UUID(), title: String, exercises: [String], duration: Int, calories: Int, theme: Theme) {
         self.id = id
@@ -17,6 +28,7 @@ struct HiitTraining: Identifiable {
         self.calories = calories
         self.theme = theme
     }
+    
 }
 
 extension HiitTraining {
@@ -29,6 +41,11 @@ extension HiitTraining {
             self.name = name
         }
     }
+    // Aqui inicia el setup de la view de editar hiit sessions
+    static var emptyExercise: HiitTraining {
+        HiitTraining(title: "", exercises: [], duration: 0, calories: 0, theme: .seafoam)
+    }
+    
 }
 
 extension HiitTraining {
