@@ -3,38 +3,38 @@
 import SwiftUI
 
 struct CardTrainingView: View {
-    let exersice: HiitTraining
+    let exercise: HiitTraining
     var body: some View {
         VStack(alignment: .leading) {
-            Text(exersice.title)
+            Text(exercise.title)
                 .font(.headline)
                 .bold()
             Spacer()
             HStack {
-                Label("\(exersice.exersices.count)", systemImage: "figure.run.square.stack.fill")
+                Label("\(exercise.exercises.count)", systemImage: "figure.run.square.stack.fill")
                     .font(.system(size: 20))
                     .bold()
                 Spacer()
-                Label("\(exersice.calories)", systemImage: /*@START_MENU_TOKEN@*/"flame.fill"/*@END_MENU_TOKEN@*/)
+                Label("\(exercise.calories)", systemImage: /*@START_MENU_TOKEN@*/"flame.fill"/*@END_MENU_TOKEN@*/)
                     .font(.system(size: 20))
                     .bold()
                 Spacer()
-                Label("\(exersice.duration)", systemImage: "clock")
+                Label("\(exercise.duration)", systemImage: "clock")
                     .font(.system(size: 20))
                     .bold()
             }
             .font(.caption)
         }
         .padding()
-        .foregroundColor(exersice.theme.accentColor)
+        .foregroundColor(exercise.theme.accentColor)
     }
 }
 
 struct CardTrainingView_Previews: PreviewProvider {
-    static var exersice = HiitTraining.backTraining[0]
+    static var exercise = HiitTraining.backTraining[0]
     static var previews: some View {
-        CardTrainingView(exersice: exersice)
-            .background(exersice.theme.mainColor)
+        CardTrainingView(exercise: exercise)
+            .background(exercise.theme.mainColor)
             .previewLayout(.fixed(width: 400, height: 60))
     }
 }

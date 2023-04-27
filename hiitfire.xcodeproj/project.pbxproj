@@ -18,7 +18,7 @@
 		C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */; };
 		C0050FFC29F835980009A9B3 /* CardTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FFB29F835980009A9B3 /* CardTrainingView.swift */; };
 		C0050FFE29F844500009A9B3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FFD29F844500009A9B3 /* SwiftUIView.swift */; };
-		C005100229F974CC0009A9B3 /* ExersiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100129F974CC0009A9B3 /* ExersiceView.swift */; };
+		C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100129F974CC0009A9B3 /* ExerciseView.swift */; };
 		C005100429F9BE7C0009A9B3 /* HiitSessionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +54,7 @@
 		C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTrainingModel.swift; sourceTree = "<group>"; };
 		C0050FFB29F835980009A9B3 /* CardTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTrainingView.swift; sourceTree = "<group>"; };
 		C0050FFD29F844500009A9B3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		C005100129F974CC0009A9B3 /* ExersiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExersiceView.swift; sourceTree = "<group>"; };
+		C005100129F974CC0009A9B3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +146,7 @@
 			children = (
 				C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */,
 				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
-				C005100129F974CC0009A9B3 /* ExersiceView.swift */,
+				C005100129F974CC0009A9B3 /* ExerciseView.swift */,
 				C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */,
 			);
 			path = Views;
@@ -297,7 +297,7 @@
 				C0050FFE29F844500009A9B3 /* SwiftUIView.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
-				C005100229F974CC0009A9B3 /* ExersiceView.swift in Sources */,
+				C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
