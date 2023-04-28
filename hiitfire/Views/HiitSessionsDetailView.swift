@@ -39,7 +39,7 @@ struct HiitSessionsDetailView: View {
             
             Section(header: Text("You will burn")) {
                 //Promedio de calorias quemadas por minuto vs. Duration
-                let caloriesBurned = Int(Double(exercise.duration) * 9.3)
+                let caloriesBurned = calculateCaloriesBurned(duration: exercise.duration)
                 Label("\(caloriesBurned) Calories", systemImage: "flame.fill")
                     .bold()
                     .font(.system(size: 18))
