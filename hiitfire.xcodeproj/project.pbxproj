@@ -21,7 +21,6 @@
 		C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100129F974CC0009A9B3 /* ExerciseView.swift */; };
 		C005100429F9BE7C0009A9B3 /* HiitSessionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */; };
 		C005100629FB15CC0009A9B3 /* HiitSessionsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */; };
-		C005100A29FB3A440009A9B3 /* MinutesToCaloriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100929FB3A440009A9B3 /* MinutesToCaloriesModel.swift */; };
 		C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */; };
 		C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */; };
 		C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */; };
@@ -62,7 +61,6 @@
 		C005100129F974CC0009A9B3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsDetailView.swift; sourceTree = "<group>"; };
 		C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsEditView.swift; sourceTree = "<group>"; };
-		C005100929FB3A440009A9B3 /* MinutesToCaloriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutesToCaloriesModel.swift; sourceTree = "<group>"; };
 		C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListModel.swift; sourceTree = "<group>"; };
 		C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			children = (
 				C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */,
 				C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */,
-				C005100929FB3A440009A9B3 /* MinutesToCaloriesModel.swift */,
 				C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */,
 			);
 			path = Models;
@@ -306,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C005100A29FB3A440009A9B3 /* MinutesToCaloriesModel.swift in Sources */,
 				C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */,
 				C0050FFC29F835980009A9B3 /* CardTrainingView.swift in Sources */,
 				C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */,

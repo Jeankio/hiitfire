@@ -8,7 +8,8 @@ import SwiftUI
 
 struct HiitSessionsEditView: View {
     //State para verificar cambios en el view local y aplicarlos
-    @State private var exercise = HiitTraining.emptyExercise
+    // Se anula el state para conectar editView con DetailView
+    @Binding var exercise: HiitTraining
     //Agregar un nuevo nombre de ejericio desde este view???? como???
     @State private var newExerciseName = ""
     // ejercicio aleatorio viene del Enum
@@ -34,9 +35,8 @@ struct HiitSessionsEditView: View {
             }
             
             Section(header: Text("You will burn")) {
-                //Promedio de calorias quemadas por minuto vs. Duration
-                let caloriesBurned = calculateCaloriesBurned(duration: exercise.duration)
-                Label("\(caloriesBurned) Calories", systemImage: "flame.fill")
+                //Se llama a la funcion de las calorias
+                Label("\(exercise.caloriesBurned()) Calories", systemImage: "flame.fill")
                     .bold()
                     .font(.system(size: 18))
                 //.frame(maxWidth:.infinity, alignment: .center)
@@ -90,6 +90,6 @@ struct HiitSessionsEditView: View {
 
 struct HiitSessionsEditView_Previews: PreviewProvider {
     static var previews: some View {
-        HiitSessionsEditView()
+        HiitSessionsEditView(exercise: .constant(HiitTraining.backTraining[0]))
     }
 }

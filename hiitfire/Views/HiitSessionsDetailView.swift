@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct HiitSessionsDetailView: View {
+    // Convertir en Binding:
+    @Binding var exercise: HiitTraining
+    //For binding edtView:
+    @State private var editingSession = HiitTraining.emptyExercise
     //Presental modalview for editview
     @State private var isPresentingEditView = false
-    let exercise: HiitTraining
+    
     
     var body: some View {
         List {
@@ -21,6 +25,7 @@ struct HiitSessionsDetailView: View {
                         .font(.headline)
                         .foregroundColor(.accentColor)
                 }
+                
                 HStack {
                     Label("Duration", systemImage: "clock")
                     Spacer()
@@ -38,9 +43,8 @@ struct HiitSessionsDetailView: View {
             }
             
             Section(header: Text("You will burn")) {
-                //Promedio de calorias quemadas por minuto vs. Duration
-                let caloriesBurned = calculateCaloriesBurned(duration: exercise.duration)
-                Label("\(caloriesBurned) Calories", systemImage: "flame.fill")
+                //Se llama a la funcion de las calorias
+                Label("\(exercise.caloriesBurned()) Calories", systemImage: "flame.fill")
                     .bold()
                     .font(.system(size: 18))
                 //.frame(maxWidth:.infinity, alignment: .center)
@@ -57,12 +61,14 @@ struct HiitSessionsDetailView: View {
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
+                editingSession = exercise
             }
         }
         // sheet for editview
         .sheet(isPresented: $isPresentingEditView) {
             NavigationStack {
-                HiitSessionsEditView()
+                //Actualizar HSEV con el binding:
+                HiitSessionsEditView(exercise: $editingSession)
                     .navigationBarTitle(exercise.title)
                 //Cancelar la edicion
                     .toolbar {
@@ -75,6 +81,7 @@ struct HiitSessionsDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isPresentingEditView = false
+                                exercise = editingSession
                         }
                     }
                 }
@@ -86,7 +93,7 @@ struct HiitSessionsDetailView: View {
 struct HiitSessionsDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            HiitSessionsDetailView(exercise: HiitTraining.backTraining[0])
+            HiitSessionsDetailView(exercise: .constant(HiitTraining.backTraining[0]))
         }
     }
 }

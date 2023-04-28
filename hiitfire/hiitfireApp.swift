@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct hiitfireApp: App {
+    @State private var exercises = HiitTraining.backTraining
+    
     var body: some Scene {
         WindowGroup {
-            ExerciseView(exercises: HiitTraining.backTraining)
+            ExerciseView(exercises: $exercises)
         }
     }
 }

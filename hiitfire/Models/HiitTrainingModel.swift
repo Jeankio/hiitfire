@@ -48,6 +48,13 @@ extension HiitTraining {
     
 }
 
+//Funcion para calcular las calorias en base a duration: Detail y Edit
+extension HiitTraining {
+    func caloriesBurned() -> Int {
+        let calories = Double(self.duration) * 10.3
+        return Int(calories.rounded())
+    }
+}
 extension HiitTraining {
     
     static let backTraining: [HiitTraining] =
