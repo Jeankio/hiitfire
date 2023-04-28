@@ -30,6 +30,7 @@ struct HiitSessionsEditView: View {
                     Spacer()
                     Text("\(exercise.duration) Minutes")
                 }
+                ThemePickerView(selection: $exercise.theme)
             }
             
             Section(header: Text("You will burn")) {
