@@ -5,9 +5,8 @@ struct HiitTraining: Identifiable {
     let id: UUID
     var title: String
     var exercises: [exercise]
-    var duration: Int
-    var calories: Int
     var theme: Theme
+    var duration: Int
     // Convertir duration en double para el slider
     var durationDouble: Double {
         get {
@@ -20,12 +19,21 @@ struct HiitTraining: Identifiable {
         }
     }
     
+    var calories: Int {
+        get {
+            return Int(Double(duration) * 10.3)
+        }
+        set {
+            // No se hace nada porque las calorías quemadas se calculan en función de la duración
+        }
+    }
+    
     init(id: UUID = UUID(), title: String, exercises: [String], duration: Int, calories: Int, theme: Theme) {
         self.id = id
         self.title = title
         self.exercises = exercises.map { exercise(id: UUID(), name: $0) }
         self.duration = duration
-        self.calories = calories
+        //self.calories = calories
         self.theme = theme
     }
     
@@ -48,13 +56,6 @@ extension HiitTraining {
     
 }
 
-//Funcion para calcular las calorias en base a duration: Detail y Edit
-extension HiitTraining {
-    func caloriesBurned() -> Int {
-        let calories = Double(self.duration) * 10.3
-        return Int(calories.rounded())
-    }
-}
 extension HiitTraining {
     
     static let backTraining: [HiitTraining] =

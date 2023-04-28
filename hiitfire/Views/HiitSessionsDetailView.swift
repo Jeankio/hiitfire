@@ -44,7 +44,7 @@ struct HiitSessionsDetailView: View {
             
             Section(header: Text("You will burn")) {
                 //Se llama a la funcion de las calorias
-                Label("\(exercise.caloriesBurned()) Calories", systemImage: "flame.fill")
+                Label("\(exercise.calories) Calories", systemImage: "flame.fill")
                     .bold()
                     .font(.system(size: 18))
                 //.frame(maxWidth:.infinity, alignment: .center)
