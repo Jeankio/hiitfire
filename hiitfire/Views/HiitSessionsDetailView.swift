@@ -20,7 +20,7 @@ struct HiitSessionsDetailView: View {
         List {
             Section(header: Text("Training info")) {
                 // Navegacion desde Detailview a HiitTrainingView
-                NavigationLink(destination: HiitTrainingView()) {
+                NavigationLink(destination: HiitTrainingView(exercise: $exercise)) {
                     Label("Start HIIT session", systemImage: "timer.square")
                         .font(.headline)
                         .foregroundColor(.accentColor)
