@@ -7,23 +7,27 @@ struct ExerciseView: View {
     @Binding var exercises: [HiitTraining]
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List($exercises) { $exercise in
                 NavigationLink(destination: HiitSessionsDetailView(exercise: $exercise)) {
                     CardTrainingView(exercise: exercise)
                 }
                 .listRowBackground(exercise.theme.mainColor)
-                
+                //.listRowSeparatorTint(Color.white)
             }
-        }
-        .navigationTitle("HIIT Sessions")
-        .toolbar {
-            Button(action: {}) {
-                Image(systemName: "plus.app")
+            .navigationTitle("HIIT Sessions")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {}) {
+                        Image(systemName: "plus.app")
+                    }
+                }
             }
         }
     }
 }
+
+
 
 
 struct exerciseView_Previews: PreviewProvider {
