@@ -54,8 +54,7 @@ struct ExerciseView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                    }) {
+                    NavigationLink(destination: ActitivitiesHistoryView()) {
                         Image(systemName: "flame.fill")
                     }
                 }

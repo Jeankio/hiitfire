@@ -15,9 +15,12 @@ struct HiitSessionsEditView: View {
     // ejercicio aleatorio viene del Enum
     @State private var selectedExercise: ExerciseList?
     //Para inhabilitar el botón aleatorio cuando hay un nuevo ejercicio
-        var offRandomButton: Bool {
-            return !newExerciseName.isEmpty
-        }
+    var offRandomButton: Bool {
+        return !newExerciseName.isEmpty
+    }
+    // Mostrar alerta al usuario para gregar ejercicios de acuerdo a la duracion establecida
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     
     
     var body: some View {
@@ -56,10 +59,16 @@ struct HiitSessionsEditView: View {
                     // Boton aleatorio
                     Section {
                         Button(action: {
-                            selectedExercise = ExerciseList.allCases.randomElement()
-                            if let selectedExercise = selectedExercise {
-                                let newExercise = HiitTraining.exercise(id: UUID(), name: selectedExercise.rawValue)
-                                exercise.exercises.append(newExercise)
+                            let maxExercises = Int(exercise.duration / 1)
+                            if exercise.exercises.count < maxExercises {
+                                selectedExercise = ExerciseList.allCases.randomElement()
+                                if let selectedExercise = selectedExercise {
+                                    let newExercise = HiitTraining.exercise(id: UUID(), name: selectedExercise.rawValue)
+                                    exercise.exercises.append(newExercise)
+                                }
+                            } else {
+                                showAlert = true
+                                alertMessage = "Sorry, you have reached the maximum number of exercises for the selected duration."
                             }
                         }) {
                             Image(systemName: "shuffle")
@@ -73,14 +82,26 @@ struct HiitSessionsEditView: View {
                         withAnimation {
                             let newExercise = HiitTraining.exercise(id: UUID(), name: newExerciseName)
                             exercise.exercises.append(newExercise)
-                            newExerciseName = ""
+                            let maxExercises = Int(exercise.duration / 1)
+                            if exercise.exercises.count < maxExercises {
+                                exercise.exercises.append(newExercise)
+                                newExerciseName = ""
+                            } else {
+                                showAlert = true
+                                alertMessage = "Sorry, you have reached the maximum number of exercises for the selected duration."
+                            }
                         }
                     }) {
                         Image(systemName: "plus.square.on.square")
-                    
+                        
                     }
                     // Desactiva el boton sin agregar para no agregar campos vacios
-                    .disabled(newExerciseName.isEmpty)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Limit Reached"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                        // Desactiva el boton sin agregar para no agregar campos vacios
+                    }
+                    // || deshabilita el boton azul +
+                    .disabled(newExerciseName.isEmpty  || exercise.exercises.count >= Int(exercise.duration / 1))
                 }
             }
         }

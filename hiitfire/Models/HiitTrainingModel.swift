@@ -28,6 +28,8 @@ struct HiitTraining: Identifiable {
         }
     }
     
+    var history: [SessionsHistory] = []
+    
     init(id: UUID = UUID(), title: String, exercises: [String], duration: Int, calories: Int, theme: Theme) {
         self.id = id
         self.title = title
