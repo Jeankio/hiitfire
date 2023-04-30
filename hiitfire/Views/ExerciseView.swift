@@ -11,13 +11,18 @@ struct ExerciseView: View {
     @State private var newExcercise = HiitTraining.emptyExercise
     
     var body: some View {
-        NavigationView {
-            List($exercises) { $exercise in
-                NavigationLink(destination: HiitSessionsDetailView(exercise: $exercise)) {
-                    CardTrainingView(exercise: exercise)
+            NavigationView {
+                List {
+                    ForEach($exercises) { $exercise in
+                        NavigationLink(destination: HiitSessionsDetailView(exercise: $exercise)) {
+                            CardTrainingView(exercise: exercise)
+                        }
+                        .listRowBackground(exercise.theme.mainColor)
+                    }
+                    .onDelete { indexSet in
+                        exercises.remove(atOffsets: indexSet)
+                    }
                 }
-                .listRowBackground(exercise.theme.mainColor)
-            }
             .navigationTitle("HIIT Sessions")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -44,6 +49,14 @@ struct ExerciseView: View {
                                 isPresentingNewExerciseView = false
                             }
                         }
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                    }) {
+                        Image(systemName: "flame.fill")
                     }
                 }
             }
