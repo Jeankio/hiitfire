@@ -5,6 +5,8 @@ import SwiftUI
 struct ExerciseView: View {
     // let to Binding / Bindear $ todo
     @Binding var exercises: [HiitTraining]
+    // Habilitar Add New HittSession
+    @State private var isPresentingNewExerciseView = false
     
     var body: some View {
         NavigationView {
@@ -17,10 +19,15 @@ struct ExerciseView: View {
             .navigationTitle("HIIT Sessions")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {}) {
+                    Button(action: {
+                        isPresentingNewExerciseView = true
+                    }) {
                         Image(systemName: "plus.app")
                     }
                 }
+            }
+            .sheet(isPresented: $isPresentingNewExerciseView) {
+                NewHIITSessionsSheet(exercises: $exercises, isPresentingNewExerciseView: $isPresentingNewExerciseView)
             }
         }
     }
