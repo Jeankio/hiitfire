@@ -13,7 +13,6 @@ struct ExerciseView: View {
                     CardTrainingView(exercise: exercise)
                 }
                 .listRowBackground(exercise.theme.mainColor)
-                //.listRowSeparatorTint(Color.white)
             }
             .navigationTitle("HIIT Sessions")
             .toolbar {

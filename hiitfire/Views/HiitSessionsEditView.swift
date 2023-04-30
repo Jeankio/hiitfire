@@ -25,7 +25,7 @@ struct HiitSessionsEditView: View {
             Section(header: Text("Training settings")) {
                 TextField("Session Title", text: $exercise.title)
                 HStack {
-                    Slider(value: $exercise.durationDouble, in: 5...30, step: 1) {
+                    Slider(value: $exercise.durationDouble, in: 5...30, step: 5) {
                         Text("Duration")
                     }
                     Spacer()
