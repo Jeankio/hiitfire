@@ -81,7 +81,7 @@ struct HiitSessionsEditView: View {
                     Button(action: {
                         withAnimation {
                             let newExercise = HiitTraining.exercise(id: UUID(), name: newExerciseName)
-                            exercise.exercises.append(newExercise)
+                            //exercise.exercises.append(newExercise)
                             let maxExercises = Int(exercise.duration / 1)
                             if exercise.exercises.count < maxExercises {
                                 exercise.exercises.append(newExercise)
