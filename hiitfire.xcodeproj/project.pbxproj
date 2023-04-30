@@ -22,7 +22,6 @@
 		C005100629FB15CC0009A9B3 /* HiitSessionsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */; };
 		C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */; };
 		C0ACD71E29FE9730007BFE49 /* HiitSessionsTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD71D29FE9730007BFE49 /* HiitSessionsTimerModel.swift */; };
-		C0ACD72029FEA2E5007BFE49 /* NewHIITSessionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD71F29FEA2E5007BFE49 /* NewHIITSessionsSheet.swift */; };
 		C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */; };
 		C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */; };
 		C0C5B37229FD27FB00CB2AC5 /* HiitTRainingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B37129FD27FA00CB2AC5 /* HiitTRainingHeaderView.swift */; };
@@ -64,7 +63,6 @@
 		C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsEditView.swift; sourceTree = "<group>"; };
 		C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListModel.swift; sourceTree = "<group>"; };
 		C0ACD71D29FE9730007BFE49 /* HiitSessionsTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsTimerModel.swift; sourceTree = "<group>"; };
-		C0ACD71F29FEA2E5007BFE49 /* NewHIITSessionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHIITSessionsSheet.swift; sourceTree = "<group>"; };
 		C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
 		C0C5B37129FD27FA00CB2AC5 /* HiitTRainingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTRainingHeaderView.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */,
 				C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */,
 				C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */,
-				C0ACD71F29FEA2E5007BFE49 /* NewHIITSessionsSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */,
 				C0C5B37229FD27FB00CB2AC5 /* HiitTRainingHeaderView.swift in Sources */,
 				C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */,
-				C0ACD72029FEA2E5007BFE49 /* NewHIITSessionsSheet.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
 				C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */,

@@ -7,6 +7,8 @@ struct ExerciseView: View {
     @Binding var exercises: [HiitTraining]
     // Habilitar Add New HittSession
     @State private var isPresentingNewExerciseView = false
+    // for add
+    @State private var newExcercise = HiitTraining.emptyExercise
     
     var body: some View {
         NavigationView {
@@ -26,8 +28,24 @@ struct ExerciseView: View {
                     }
                 }
             }
+            // Habilitar el add button
             .sheet(isPresented: $isPresentingNewExerciseView) {
-                NewHIITSessionsSheet(exercises: $exercises, isPresentingNewExerciseView: $isPresentingNewExerciseView)
+                NavigationView {
+                    HiitSessionsEditView(exercise: $newExcercise)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Dismiss") {
+                                    isPresentingNewExerciseView = false
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+                                exercises.append(newExcercise)
+                                isPresentingNewExerciseView = false
+                            }
+                        }
+                    }
+                }
             }
         }
     }
