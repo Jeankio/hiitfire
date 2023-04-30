@@ -41,12 +41,16 @@ struct ExerciseView: View {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Dismiss") {
                                     isPresentingNewExerciseView = false
+                                    // Limpiar la pantalla
+                                    newExcercise = HiitTraining.emptyExercise
                                 }
                             }
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Add") {
                                 exercises.append(newExcercise)
                                 isPresentingNewExerciseView = false
+                                // Limpiar la pantalla
+                                newExcercise = HiitTraining.emptyExercise
                             }
                         }
                     }
