@@ -10,16 +10,19 @@ import SwiftUI
 struct CountDownTimerView: View {
     
     @Binding var exercise: HiitTraining
+    // Variable para el ejercicio actual
+    @State var currentExerciseIndex: Int
     
     @State private var secondsRemaining = 0
     @State private var timerRunning = false
-    // Variable para el ejercicio actual
-    var currentExerciseIndex: Int
+    // Nuevo estado para cambiar el nombre cada minuto
+    @State private var currentExerciseName = ""
+    
     
     var body: some View {
         VStack {
             // Para mostrar el nombre del ejercicio actual
-            Text(exercise.exercises[currentExerciseIndex].name)
+            Text(currentExerciseName)
             Text("\(formattedTime)")
             Button(action: {
                 startTimer()
@@ -28,9 +31,11 @@ struct CountDownTimerView: View {
             })
             .disabled(timerRunning)
         }
-        .navigationTitle("Timer")
+        .navigationTitle("\(exercise.title)")
         .onAppear {
             secondsRemaining = exercise.duration * 60
+            // Muestra el primer ejercicicio
+            currentExerciseName = exercise.exercises[currentExerciseIndex].name
         }
         .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect(), perform: { _ in
             if timerRunning {
@@ -38,6 +43,12 @@ struct CountDownTimerView: View {
                     secondsRemaining -= 1
                 } else {
                     stopTimer()
+                }
+                
+                //Camnbiar el nombre cada minuto
+                if secondsRemaining % 60 == 0 {
+                    currentExerciseIndex += 1
+                    currentExerciseName = exercise.exercises[currentExerciseIndex].name
                 }
             }
         })
