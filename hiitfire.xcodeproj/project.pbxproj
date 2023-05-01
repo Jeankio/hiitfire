@@ -27,7 +27,7 @@
 		C0ACD7262A001E94007BFE49 /* CountDownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */; };
 		C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */; };
 		C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */; };
-		C0C5B37229FD27FB00CB2AC5 /* HiitTRainingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B37129FD27FA00CB2AC5 /* HiitTRainingHeaderView.swift */; };
+		C0C5B37229FD27FB00CB2AC5 /* HiitSessionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerView.swift; sourceTree = "<group>"; };
 		C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
-		C0C5B37129FD27FA00CB2AC5 /* HiitTRainingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTRainingHeaderView.swift; sourceTree = "<group>"; };
+		C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */,
-				C0C5B37129FD27FA00CB2AC5 /* HiitTRainingHeaderView.swift */,
+				C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */,
 				C005100129F974CC0009A9B3 /* ExerciseView.swift */,
 				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
 				C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */,
@@ -325,7 +325,7 @@
 				C0ACD72229FEF566007BFE49 /* ActitivitiesHistoryView.swift in Sources */,
 				C005100629FB15CC0009A9B3 /* HiitSessionsEditView.swift in Sources */,
 				C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */,
-				C0C5B37229FD27FB00CB2AC5 /* HiitTRainingHeaderView.swift in Sources */,
+				C0C5B37229FD27FB00CB2AC5 /* HiitSessionProgressView.swift in Sources */,
 				C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
