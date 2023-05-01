@@ -8,6 +8,8 @@ struct HiitSessionsDetailView: View {
     @State private var editingSession = HiitTraining.emptyExercise
     //Presental modalview for editview
     @State private var isPresentingEditView = false
+    // Estado para definir el ejercicio actual
+    @State private var currentExerciseIndex = 0
     
     
     
@@ -79,13 +81,17 @@ struct HiitSessionsDetailView: View {
             }
         }
         VStack {
-            NavigationLink(destination: HiitTrainingView(exercise: $exercise)) {
+            NavigationLink(destination: CountDownTimerView(exercise: $exercise, currentExerciseIndex: currentExerciseIndex)) {
                 Text("Go")
                     .frame(width: 100, height: 100)
                     .foregroundColor(exercise.theme.accentColor)
                     .background(exercise.theme.mainColor)
                     .clipShape(Circle())
                     .padding(.top, 20)
+            }
+            //Pasarle el ejercicio al boton
+            .onTapGesture {
+                currentExerciseIndex = 0 // Establecer el índice del ejercicio actual
             }
             .shadow(radius: 10)
         }
