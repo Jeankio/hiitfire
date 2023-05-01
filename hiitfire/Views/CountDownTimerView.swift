@@ -23,14 +23,10 @@ struct CountDownTimerView: View {
                 .fill(exercise.theme.mainColor)
             VStack {
                 HStack {
-                    Spacer()
-                    Image(systemName: "flame.fill")
-                        .font(.system(size: 30))
-                    Text("\(exercise.title)")
+                    Text("🔥 \(exercise.title)")
                         .font(.title)
                         .bold()
                         .padding()
-                    Spacer()
                 }
                 Spacer()
                 Text(currentExerciseName)
@@ -97,7 +93,7 @@ struct CountDownTimerView: View {
                     if secondsRemaining % 60 >= 30 {
                         currentExerciseName = exercise.exercises[currentExerciseIndex].name
                     } else {
-                        currentExerciseName = "Rest"
+                        currentExerciseName = "Rest...😵‍💫"
                     }
                 }
             })
