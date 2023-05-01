@@ -17,15 +17,19 @@ struct CountDownTimerView: View {
     @State private var timerRunning = false
     // Nuevo estado para cambiar el nombre cada minuto
     @State private var currentExerciseName = ""
+    @State private var restTimeRemaining = 0
+    @State private var elapsedTime = 0
     
     
     var body: some View {
         VStack {
             // Para mostrar el nombre del ejercicio actual
             Text(currentExerciseName)
+                .font(.largeTitle)
             Text("\(formattedTime)")
+                .font(.title)
             Button(action: {
-                startTimer()
+                startTimer(timerRunning: $timerRunning)
             }, label: {
                 Text("Start Timer")
             })
@@ -36,37 +40,50 @@ struct CountDownTimerView: View {
             secondsRemaining = exercise.duration * 60
             // Muestra el primer ejercicicio
             currentExerciseName = exercise.exercises[currentExerciseIndex].name
+            restTimeRemaining = 0
+            elapsedTime = 0
         }
         .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect(), perform: { _ in
             if timerRunning {
                 if secondsRemaining > 0 {
                     secondsRemaining -= 1
                 } else {
-                    stopTimer()
+                    stopTimer(timerRunning: $timerRunning)
                 }
                 
-                //Camnbiar el nombre cada minuto
+                //Cambiar el nombre cada minuto
                 if secondsRemaining % 60 == 0 {
                     currentExerciseIndex += 1
+                    if currentExerciseIndex >= exercise.exercises.count {
+                        currentExerciseIndex = 0
+                    }
                     currentExerciseName = exercise.exercises[currentExerciseIndex].name
+                }
+                // Cambiar el nombre a Rest si quedan menos de 30 segundos
+                if secondsRemaining % 60 >= 30 {
+                    currentExerciseName = exercise.exercises[currentExerciseIndex].name
+                } else {
+                    currentExerciseName = "Rest"
                 }
             }
         })
     }
     
-    func startTimer() {
-        timerRunning = true
-    }
-    
-    func stopTimer() {
-        timerRunning = false
-    }
     // Hacer que el contador sea minutos con segundos
     var formattedTime: String {
         let minutes = secondsRemaining / 60
         let seconds = secondsRemaining % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
+}
+
+
+func startTimer(timerRunning: Binding<Bool>) {
+    timerRunning.wrappedValue = true
+}
+
+func stopTimer(timerRunning: Binding<Bool>) {
+    timerRunning.wrappedValue = false
 }
 
 
