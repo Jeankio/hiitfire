@@ -22,20 +22,46 @@ struct CountDownTimerView: View {
             RoundedRectangle(cornerRadius: 16.0)
                 .fill(exercise.theme.mainColor)
             VStack {
-                HiitSessionProgressView(theme: exercise.theme, progressValue: progressValue)
-                // Para mostrar el nombre del ejercicio actual
+                HStack {
+                    Spacer()
+                    Image(systemName: "flame.fill")
+                        .font(.system(size: 30))
+                    Text("\(exercise.title)")
+                        .font(.title)
+                        .bold()
+                        .padding()
+                    Spacer()
+                }
+                Spacer()
                 Text(currentExerciseName)
                     .font(.largeTitle)
+                    .bold()
+                    .padding()
+                Spacer()
+                HiitSessionProgressView(theme: exercise.theme, progressValue: progressValue)
                 Text("\(formattedTime)")
                     .font(.title)
+                    .bold()
+                Spacer()
                 Button(action: {
-                    startTimer(timerRunning: $timerRunning)
+                    if timerRunning {
+                        stopTimer(timerRunning: $timerRunning)
+                    } else {
+                        startTimer(timerRunning: $timerRunning)
+                    }
                 }, label: {
-                    Text("Start Timer")
+                    Image(systemName: timerRunning ? "pause.fill" : "play.fill")
+                        .font(.title)
                 })
-                .disabled(timerRunning)
-            }
-            .navigationTitle("\(exercise.title)")
+                .frame(width: 100, height: 100)
+                .foregroundColor(exercise.theme.mainColor)
+                .background(exercise.theme.accentColor)
+                .clipShape(Circle())
+                .padding(.top, 60)
+                .padding(.bottom, 20)
+                .disabled(restTimeRemaining > 0)
+            }.padding()
+            //.navigationTitle("\(exercise.title)")
             .onAppear {
                 secondsRemaining = exercise.duration * 60
                 // Muestra el primer ejercicicio
@@ -98,6 +124,8 @@ func startTimer(timerRunning: Binding<Bool>) {
 func stopTimer(timerRunning: Binding<Bool>) {
     timerRunning.wrappedValue = false
 }
+
+//Empezar y pausar un ejercicio.
 
 
 
