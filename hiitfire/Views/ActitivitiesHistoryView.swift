@@ -4,8 +4,8 @@ import SwiftUI
 
 struct ActitivitiesHistoryView: View {
     @Binding var exercise: HiitTraining
+    @State var currentExerciseIndex = 0
     @Environment(\.presentationMode) var presentationMode
-   
     
         var body: some View {
         VStack {

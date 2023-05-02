@@ -20,10 +20,10 @@
 		C005100429F9BE7C0009A9B3 /* HiitSessionsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */; };
 		C005100629FB15CC0009A9B3 /* HiitSessionsEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */; };
 		C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */; };
-		C0ACD71E29FE9730007BFE49 /* HiitSessionsTimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD71D29FE9730007BFE49 /* HiitSessionsTimerModel.swift */; };
 		C0ACD72229FEF566007BFE49 /* ActitivitiesHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD72129FEF566007BFE49 /* ActitivitiesHistoryView.swift */; };
 		C0ACD72429FEFF65007BFE49 /* SessionsHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD72329FEFF64007BFE49 /* SessionsHistoryModel.swift */; };
 		C0ACD7262A001E94007BFE49 /* CountDownTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */; };
+		C0ACD7282A015FC9007BFE49 /* PersistenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ACD7272A015FC9007BFE49 /* PersistenceModel.swift */; };
 		C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */; };
 		C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */; };
 		C0C5B37229FD27FB00CB2AC5 /* HiitSessionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */; };
@@ -63,10 +63,10 @@
 		C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsDetailView.swift; sourceTree = "<group>"; };
 		C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsEditView.swift; sourceTree = "<group>"; };
 		C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListModel.swift; sourceTree = "<group>"; };
-		C0ACD71D29FE9730007BFE49 /* HiitSessionsTimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionsTimerModel.swift; sourceTree = "<group>"; };
 		C0ACD72129FEF566007BFE49 /* ActitivitiesHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActitivitiesHistoryView.swift; sourceTree = "<group>"; };
 		C0ACD72329FEFF64007BFE49 /* SessionsHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsHistoryModel.swift; sourceTree = "<group>"; };
 		C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerView.swift; sourceTree = "<group>"; };
+		C0ACD7272A015FC9007BFE49 /* PersistenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceModel.swift; sourceTree = "<group>"; };
 		C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerView.swift; sourceTree = "<group>"; };
 		C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitSessionProgressView.swift; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 				C0050FF729F82B6E0009A9B3 /* AppThemeModel.swift */,
 				C0050FF929F830050009A9B3 /* HiitTrainingModel.swift */,
 				C005100B29FB5DED0009A9B3 /* ExerciseListModel.swift */,
-				C0ACD71D29FE9730007BFE49 /* HiitSessionsTimerModel.swift */,
 				C0ACD72329FEFF64007BFE49 /* SessionsHistoryModel.swift */,
+				C0ACD7272A015FC9007BFE49 /* PersistenceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,7 +315,6 @@
 				C0ACD7262A001E94007BFE49 /* CountDownTimerView.swift in Sources */,
 				C0050FF829F82B6E0009A9B3 /* AppThemeModel.swift in Sources */,
 				C0ACD72429FEFF65007BFE49 /* SessionsHistoryModel.swift in Sources */,
-				C0ACD71E29FE9730007BFE49 /* HiitSessionsTimerModel.swift in Sources */,
 				C0050FFC29F835980009A9B3 /* CardTrainingView.swift in Sources */,
 				C0C5B37029FC1B1C00CB2AC5 /* ThemePickerView.swift in Sources */,
 				C005100429F9BE7C0009A9B3 /* HiitSessionsDetailView.swift in Sources */,
@@ -324,6 +323,7 @@
 				C005100C29FB5DED0009A9B3 /* ExerciseListModel.swift in Sources */,
 				C0C5B37229FD27FB00CB2AC5 /* HiitSessionProgressView.swift in Sources */,
 				C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */,
+				C0ACD7282A015FC9007BFE49 /* PersistenceModel.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
 				C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,

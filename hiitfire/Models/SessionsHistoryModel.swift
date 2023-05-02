@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct SessionsHistory: Identifiable {
+struct SessionsHistory: Identifiable, Codable {
     let id: UUID
     var title: String
     var duration: Int

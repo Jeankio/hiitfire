@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct HiitTraining: Identifiable {
+struct HiitTraining: Identifiable, Codable {
     let id: UUID
     var title: String
     var exercises: [exercise]
@@ -39,10 +39,13 @@ struct HiitTraining: Identifiable {
         self.theme = theme
     }
     
+    var isValid: Bool {
+            return !title.isEmpty && !exercises.isEmpty && duration > 0
+        }
 }
 
 extension HiitTraining {
-    struct exercise: Identifiable {
+    struct exercise: Identifiable, Codable {
         let id: UUID
         var name: String
         

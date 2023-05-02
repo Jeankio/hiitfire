@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum ExerciseList: String, CaseIterable {
+enum ExerciseList: String, CaseIterable, Codable {
     case burpees = "Burpees"
     case mountainClimbers = "Mountain Climbers"
     case jumpingJacks = "Jumping Jacks"

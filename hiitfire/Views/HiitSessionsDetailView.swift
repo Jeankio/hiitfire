@@ -98,6 +98,8 @@ struct HiitSessionsDetailView: View {
         VStack {
             NavigationLink(destination: CountDownTimerView(exercise: $exercise, currentExerciseIndex: currentExerciseIndex)) {
                 Text("Go")
+                    .font(.title)
+                    .bold()
                     .frame(width: 100, height: 100)
                     .foregroundColor(exercise.theme.accentColor)
                     .background(exercise.theme.mainColor)
