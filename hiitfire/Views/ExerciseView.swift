@@ -12,18 +12,20 @@ struct ExerciseView: View {
     @State private var selectedExercise = HiitTraining.emptyExercise
     
     var body: some View {
-            NavigationView {
-                List {
-                    ForEach($exercises) { $exercise in
-                        NavigationLink(destination: HiitSessionsDetailView(exercise: $exercise)) {
-                            CardTrainingView(exercise: exercise)
-                        }
-                        .listRowBackground(exercise.theme.mainColor)
+        NavigationView {
+            List {
+                ForEach($exercises) { $exercise in
+                    NavigationLink(destination: HiitSessionsDetailView(exercise: $exercise, onSave: {
+                        exercises.persist()
+                    })) {
+                        CardTrainingView(exercise: exercise)
                     }
-                    .onDelete { indexSet in
-                        exercises.remove(atOffsets: indexSet)
-                    }
+                    .listRowBackground(exercise.theme.mainColor)
                 }
+                .onDelete { indexSet in
+                    exercises.remove(atOffsets: indexSet)
+                }
+            }
             .navigationTitle("HIIT Sessions")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -48,14 +50,17 @@ struct ExerciseView: View {
                             }
                             ToolbarItem(placement: .confirmationAction) {
                                 Button("Add") {
-                                exercises.append(newExcercise)
-                                isPresentingNewExerciseView = false
-                                // Limpiar la pantalla
-                                newExcercise = HiitTraining.emptyExercise
+                                    exercises.add(training: newExcercise)
+                                    isPresentingNewExerciseView = false
+                                    // Limpiar la pantalla
+                                    newExcercise = HiitTraining.emptyExercise
+                                }
                             }
                         }
-                    }
                 }
+            }
+            .task {
+                exercises.load()
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

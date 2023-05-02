@@ -7,49 +7,47 @@
 
 import Foundation
 
-extension HiitTraining {
-    
-    //Persistencia con FileManager paso 2 (1 Volver todo Codable)
-    private var exercisesFile: URL {
+extension Array where Element == HiitTraining {
+    private var hiitTrainingsFile: URL {
         do {
             let documentsDirectory = try FileManager.default.url(
                 for: .documentDirectory,
                 in: .userDomainMask,
                 appropriateFor: nil,
                 create: true)
-            return documentsDirectory.appendingPathComponent("exercises")
+            return documentsDirectory.appendingPathComponent("exercises.json")
         }
         catch {
             fatalError("Can't find exercises file: \(error)")
         }
     }
     
-    // Persistencia guardar exercices paso 3
-    func saveExercises() {
+    func persist() {
         do {
-            let encodedData = try JSONEncoder().encode(exercises)
-            try encodedData.write(to: exercisesFile)
+            let encodedData = try JSONEncoder().encode(self)
+            try encodedData.write(to: hiitTrainingsFile)
         }
         catch {
             fatalError("Can't encode exercises: \(error)")
         }
     }
-
-    mutating func loadExercise() {
-        guard let data = try? Data(contentsOf: exercisesFile) else {return}
+    
+    mutating func load() {
+        guard let data = try? Data(contentsOf: hiitTrainingsFile) else {return}
         do {
-            let savedExercises = try JSONDecoder().decode([exercise].self, from: data)
-            exercises = savedExercises
+            let trainings = try JSONDecoder().decode([HiitTraining].self, from: data)
+            self.removeAll(where: { _ in true })
+            self.append(contentsOf: trainings)
         }
         catch {
             fatalError("Can't load exercises: \(error)")
         }
     }
-
-    mutating func add(exercise: HiitTraining) {
-        if exercise.isValid {
-            exercises.append(contentsOf: exercise.exercises)
-            saveExercises()
+    
+    mutating func add(training: HiitTraining) {
+        if training.isValid {
+            self.append(training)
+            persist()
         }
     }
 }

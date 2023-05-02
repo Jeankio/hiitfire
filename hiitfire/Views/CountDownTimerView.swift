@@ -5,6 +5,9 @@ import SwiftUI
 struct CountDownTimerView: View {
     
     @Binding var exercise: HiitTraining
+    
+    var onSave: () -> Void
+    
     // Variable para el ejercicio actual
     @State var currentExerciseIndex: Int
     
@@ -104,7 +107,7 @@ struct CountDownTimerView: View {
                     // Crear un objeto de registro de ejercicio
                     let sessionHistory = SessionsHistory(id: UUID(), title: exercise.title, duration: exercise.duration, caloriesBourned: Double(caloriesBurned), date: Date())
                     exercise.history.insert(sessionHistory, at: 0)
-                    
+                    onSave()
                 } //Disappear
         } //Zstack
         .padding()
@@ -135,6 +138,6 @@ func stopTimer(timerRunning: Binding<Bool>) {
 
 struct CountDownTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        CountDownTimerView(exercise: .constant(HiitTraining.emptyExercise), currentExerciseIndex: 0)
+        CountDownTimerView(exercise: .constant(HiitTraining.emptyExercise), onSave: {}, currentExerciseIndex: 0)
     }
 }

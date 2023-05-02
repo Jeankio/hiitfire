@@ -63,7 +63,7 @@ struct HiitSessionsEditView: View {
                             if exercise.exercises.count < maxExercises {
                                 selectedExercise = ExerciseList.allCases.randomElement()
                                 if let selectedExercise = selectedExercise {
-                                    let newExercise = HiitTraining.exercise(id: UUID(), name: selectedExercise.rawValue)
+                                    let newExercise = HiitTraining.Exercise(id: UUID(), name: selectedExercise.rawValue)
                                     exercise.exercises.append(newExercise)
                                 }
                             } else {
@@ -80,7 +80,7 @@ struct HiitSessionsEditView: View {
                     TextField("Add Exercise", text: $newExerciseName)
                     Button(action: {
                         withAnimation {
-                            let newExercise = HiitTraining.exercise(id: UUID(), name: newExerciseName)
+                            let newExercise = HiitTraining.Exercise(id: UUID(), name: newExerciseName)
                             let maxExercises = Int(exercise.duration / 1)
                             if exercise.exercises.count < maxExercises {
                                 exercise.exercises.append(newExercise)

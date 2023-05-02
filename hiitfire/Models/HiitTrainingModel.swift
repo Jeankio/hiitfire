@@ -4,7 +4,7 @@ import Foundation
 struct HiitTraining: Identifiable, Codable {
     let id: UUID
     var title: String
-    var exercises: [exercise]
+    var exercises: [Exercise]
     var theme: Theme
     var duration: Int
     // Convertir duration en double para el slider
@@ -33,7 +33,7 @@ struct HiitTraining: Identifiable, Codable {
     init(id: UUID = UUID(), title: String, exercises: [String], duration: Int, calories: Int, theme: Theme) {
         self.id = id
         self.title = title
-        self.exercises = exercises.map { exercise(id: UUID(), name: $0) }
+        self.exercises = exercises.map { Exercise(id: UUID(), name: $0) }
         self.duration = duration
         //self.calories = calories
         self.theme = theme
@@ -45,7 +45,7 @@ struct HiitTraining: Identifiable, Codable {
 }
 
 extension HiitTraining {
-    struct exercise: Identifiable, Codable {
+    struct Exercise: Identifiable, Codable {
         let id: UUID
         var name: String
         

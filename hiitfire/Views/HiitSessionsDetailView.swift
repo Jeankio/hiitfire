@@ -4,6 +4,7 @@ import SwiftUI
 struct HiitSessionsDetailView: View {
     // Convertir en Binding:
     @Binding var exercise: HiitTraining
+    var onSave: () -> Void
     //For binding edtView:
     @State private var editingSession = HiitTraining.emptyExercise
     //Presenta modalview for editview
@@ -80,6 +81,7 @@ struct HiitSessionsDetailView: View {
                                 Button("Done") {
                                     isPresentingEditView = false
                                     exercise = editingSession
+                                    onSave()
                                 }
                             }
                         }
@@ -96,7 +98,7 @@ struct HiitSessionsDetailView: View {
             }
         }
         VStack {
-            NavigationLink(destination: CountDownTimerView(exercise: $exercise, currentExerciseIndex: currentExerciseIndex)) {
+            NavigationLink(destination: CountDownTimerView(exercise: $exercise, onSave: onSave, currentExerciseIndex: currentExerciseIndex)) {
                 Text("Go")
                     .font(.title)
                     .bold()
@@ -118,7 +120,7 @@ struct HiitSessionsDetailView: View {
 struct HiitSessionsDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            HiitSessionsDetailView(exercise: .constant(HiitTraining.backTraining[0]))
+            HiitSessionsDetailView(exercise: .constant(HiitTraining.backTraining[0]), onSave: {})
         }
     }
 }
