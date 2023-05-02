@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FCA29F81D780009A9B3 /* hiitfireApp.swift */; };
-		C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */; };
 		C0050FCF29F81D7D0009A9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0050FCE29F81D7D0009A9B3 /* Assets.xcassets */; };
 		C0050FD229F81D7D0009A9B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0050FD129F81D7D0009A9B3 /* Preview Assets.xcassets */; };
 		C0050FDC29F81D7E0009A9B3 /* hiitfireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0050FDB29F81D7E0009A9B3 /* hiitfireTests.swift */; };
@@ -50,7 +49,6 @@
 /* Begin PBXFileReference section */
 		C0050FC729F81D780009A9B3 /* hiitfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hiitfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0050FCA29F81D780009A9B3 /* hiitfireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hiitfireApp.swift; sourceTree = "<group>"; };
-		C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiitTrainingView.swift; sourceTree = "<group>"; };
 		C0050FCE29F81D7D0009A9B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0050FD129F81D7D0009A9B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0050FD729F81D7E0009A9B3 /* hiitfireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hiitfireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +157,6 @@
 		C0050FF429F822DA0009A9B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0050FCC29F81D780009A9B3 /* HiitTrainingView.swift */,
 				C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */,
 				C005100129F974CC0009A9B3 /* ExerciseView.swift */,
 				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
@@ -328,7 +325,6 @@
 				C0C5B37229FD27FB00CB2AC5 /* HiitSessionProgressView.swift in Sources */,
 				C0C5B36E29FC18EE00CB2AC5 /* ThemeView.swift in Sources */,
 				C0050FFA29F830050009A9B3 /* HiitTrainingModel.swift in Sources */,
-				C0050FCD29F81D780009A9B3 /* HiitTrainingView.swift in Sources */,
 				C005100229F974CC0009A9B3 /* ExerciseView.swift in Sources */,
 				C0050FCB29F81D780009A9B3 /* hiitfireApp.swift in Sources */,
 			);

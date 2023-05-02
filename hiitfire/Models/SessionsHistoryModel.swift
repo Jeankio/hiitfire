@@ -4,12 +4,17 @@ import Foundation
 
 struct SessionsHistory: Identifiable {
     let id: UUID
-    let date: Date
-    var exercices: [HiitTraining.exercise]
+    var title: String
+    var duration: Int
+    var caloriesBourned: Double
+    var date: Date
     
-    init(id: UUID = UUID(), date: Date = Date(), exercices: [HiitTraining.exercise]) {
+    init(id: UUID, title: String, duration: Int, caloriesBourned: Double, date: Date) {
         self.id = id
+        self.title = title
+        self.duration = duration
+        self.caloriesBourned = caloriesBourned
         self.date = date
-        self.exercices = exercices
     }
+    
 }

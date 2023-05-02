@@ -3,12 +3,29 @@
 import SwiftUI
 
 struct ActitivitiesHistoryView: View {
+    @Binding var exercise: HiitTraining
     @Environment(\.presentationMode) var presentationMode
+   
     
-    var body: some View {
+        var body: some View {
         VStack {
-           // Algo aqui
-            Spacer()
+            List {
+                Section(header: Text("Session History")) {
+                    if exercise.history.isEmpty {
+                        Label("No HIIT Sessions yet", systemImage: "list.bullet.below.rectangle")
+                    }
+                    ForEach(exercise.history) { history in
+                        VStack {
+                            HStack {
+                                Text(history.title)
+                                Image(systemName: "list.bullet.clipboard.fill")
+                            }
+                            Text(history.date, style: .date)
+                            Text(history.title)
+                        }
+                    }
+                }
+            }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
@@ -31,8 +48,6 @@ struct ActitivitiesHistoryView: View {
 
 struct ActitivitiesHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ActitivitiesHistoryView()
-        }
+        ActitivitiesHistoryView(exercise: .constant(HiitTraining.backTraining[0]))
     }
 }

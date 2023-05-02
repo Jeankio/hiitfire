@@ -6,7 +6,7 @@ struct HiitSessionsDetailView: View {
     @Binding var exercise: HiitTraining
     //For binding edtView:
     @State private var editingSession = HiitTraining.emptyExercise
-    //Presental modalview for editview
+    //Presenta modalview for editview
     @State private var isPresentingEditView = false
     // Estado para definir el ejercicio actual
     @State private var currentExerciseIndex = 0
@@ -39,6 +39,21 @@ struct HiitSessionsDetailView: View {
                         .font(.system(size: 30))
                         .frame(maxWidth:.infinity, alignment: .center)
                 }
+                /*Section(header: Text("Session History")) {
+                    if exercise.history.isEmpty {
+                        Label("No HIIT Sessions yet", systemImage: "list.bullet.below.rectangle")
+                    }
+                    ForEach(exercise.history) { history in
+                        VStack {
+                            HStack {
+                                Text(history.title)
+                                Image(systemName: "list.bullet.clipboard.fill")
+                            }
+                            Text(history.date, style: .date)
+                            Text(history.title)
+                        }
+                    }
+                }*/
             } // List
             .navigationTitle(exercise.title)
             .toolbar {

@@ -9,6 +9,7 @@ struct ExerciseView: View {
     @State private var isPresentingNewExerciseView = false
     // for add
     @State private var newExcercise = HiitTraining.emptyExercise
+    @State private var selectedExercise = HiitTraining.emptyExercise
     
     var body: some View {
             NavigationView {
@@ -58,7 +59,7 @@ struct ExerciseView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: ActitivitiesHistoryView()) {
+                    NavigationLink(destination: ActitivitiesHistoryView(exercise: $selectedExercise)) {
                         Image(systemName: "flame.fill")
                     }
                 }
