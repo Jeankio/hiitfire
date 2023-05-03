@@ -157,15 +157,8 @@
 		C0050FF429F822DA0009A9B3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */,
-				C005100129F974CC0009A9B3 /* ExerciseView.swift */,
-				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
-				C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */,
-				C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */,
-				C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */,
-				C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */,
-				C0ACD72129FEF566007BFE49 /* ActitivitiesHistoryView.swift */,
-				C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */,
+				C0ACD7292A01B3F6007BFE49 /* ComponentsView */,
+				C0ACD72A2A01B478007BFE49 /* PrincipalsViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +173,29 @@
 				C0ACD7272A015FC9007BFE49 /* PersistenceModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C0ACD7292A01B3F6007BFE49 /* ComponentsView */ = {
+			isa = PBXGroup;
+			children = (
+				C0C5B37129FD27FA00CB2AC5 /* HiitSessionProgressView.swift */,
+				C0050FFB29F835980009A9B3 /* CardTrainingView.swift */,
+				C0C5B36D29FC18EE00CB2AC5 /* ThemeView.swift */,
+				C0C5B36F29FC1B1C00CB2AC5 /* ThemePickerView.swift */,
+			);
+			path = ComponentsView;
+			sourceTree = "<group>";
+		};
+		C0ACD72A2A01B478007BFE49 /* PrincipalsViews */ = {
+			isa = PBXGroup;
+			children = (
+				C005100129F974CC0009A9B3 /* ExerciseView.swift */,
+				C005100329F9BE7C0009A9B3 /* HiitSessionsDetailView.swift */,
+				C0ACD7252A001E94007BFE49 /* CountDownTimerView.swift */,
+				C0ACD72129FEF566007BFE49 /* ActitivitiesHistoryView.swift */,
+				C005100529FB15CB0009A9B3 /* HiitSessionsEditView.swift */,
+			);
+			path = PrincipalsViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

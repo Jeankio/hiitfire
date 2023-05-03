@@ -105,7 +105,7 @@ struct CountDownTimerView: View {
                     let caloriesBurned = exercise.calories * (exercise.duration - secondsRemaining/60)
                     
                     // Crear un objeto de registro de ejercicio
-                    let sessionHistory = SessionsHistory(id: UUID(), title: exercise.title, duration: exercise.duration, caloriesBourned: Double(caloriesBurned), date: Date())
+                    let sessionHistory = SessionsHistory(id: UUID(), title: exercise.title, duration: exercise.duration, caloriesBourned: Int(Double(caloriesBurned)), date: Date())
                     exercise.history.insert(sessionHistory, at: 0)
                     onSave()
                 } //Disappear

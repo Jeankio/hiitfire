@@ -24,6 +24,7 @@ struct ExerciseView: View {
                 }
                 .onDelete { indexSet in
                     exercises.remove(atOffsets: indexSet)
+                    exercises.persist()
                 }
             }
             .navigationTitle("HIIT Sessions")
@@ -64,7 +65,7 @@ struct ExerciseView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: ActitivitiesHistoryView(exercise: $selectedExercise)) {
+                    NavigationLink(destination: ActitivitiesHistoryView(trainings: exercises)) {
                         Image(systemName: "flame.fill")
                     }
                 }
